@@ -412,8 +412,6 @@ nav ul li a:focus {
 
 /* Competencias con iconos modernos */
 .cbta97-competencia {
-    display: flex;
-    align-items: flex-start;
     margin-bottom: 2rem;
     padding: 1.5rem;
     background: white;
