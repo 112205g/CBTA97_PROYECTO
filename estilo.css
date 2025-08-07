@@ -37,6 +37,7 @@ header {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     color: white;
+    padding: 0.5rem 0;
     position: fixed;
     width: 100%;
     top: 0;
