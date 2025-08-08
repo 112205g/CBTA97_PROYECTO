@@ -10,22 +10,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="imagenes/WhatsApp Image 2023-07-05 at 10.49.51 PM - Editado (2).png" alt="Logo CBTA 97 - Educación Tecnológica Agropecuaria">
-                <h1>CBTA 97</h1>
-            </div>
-            <nav aria-label="Navegación principal">
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="imagenes/WhatsApp Image 2023-07-05 at 10.49.51 PM - Editado (2).png" alt="Logo CBTA 97">
+            <h1>CBTA 97</h1>
+        </div>
+        
+        <!-- Menú desktop (visible en pantallas grandes) -->
+        <nav class="desktop-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="#inicio" aria-current="page">Inicio</a></li>
+                <li><a href="#oferta-educativa">Oferta Educativa</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="">Acerca de</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Botón hamburguesa (solo móvil) -->
+        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <!-- Menú móvil integrado en el header -->
+        <div class="mobile-menu-container">
+            <nav class="mobile-nav" aria-label="Navegación móvil">
                 <ul>
-                    <li><a href="#inicio" aria-current="page">Inicio</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#oferta-educativa">Oferta Educativa</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                     <li><a href="">Acerca de</a></li>
                 </ul>
             </nav>
         </div>
-    </header>
+    </div>
+</header>
 
     <section class="hero" id="inicio" aria-labelledby="hero-heading">
         <div class="hero-content fade-in">
@@ -412,63 +431,52 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Seleccionar todos los botones del menú
-            const menuButtons = document.querySelectorAll('.cbta97-menu-btn');
-            const careerContainers = document.querySelectorAll('.cbta97-carrera-container');
-            
-            // Mostrar solo la carrera activa inicialmente
-            function initializeCareerDisplay() {
-                careerContainers.forEach(container => {
-                    if (container.classList.contains('cbta97-active')) {
-                        container.style.display = 'block';
-                    } else {
-                        container.style.display = 'none';
-                    }
-                });
-            }
-            
-            // Inicializar la visualización de carreras
-            initializeCareerDisplay();
-            
-            // Función para cambiar entre carreras
-            function switchCareer(selectedCareer) {
-                // Remover clase 'cbta97-active' de todos los botones
-                menuButtons.forEach(button => {
-                    button.classList.remove('cbta97-active');
-                });
-                
-                // Añadir clase 'cbta97-active' al botón seleccionado
-                selectedCareer.classList.add('cbta97-active');
-                
-                // Ocultar todos los contenedores de carrera
-                careerContainers.forEach(container => {
-                    container.style.display = 'none';
-                    container.classList.remove('cbta97-active');
-                });
-                
-                // Mostrar el contenedor de la carrera seleccionada
-                const targetCareer = document.getElementById(selectedCareer.dataset.carrera);
-                if (targetCareer) {
-                    targetCareer.style.display = 'block';
-                    targetCareer.classList.add('cbta97-active');
-                    
-                    // Desplazamiento suave al principio de la página
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-            
-            // Añadir event listeners a los botones del menú
-            menuButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    switchCareer(this);
-                });
+    document.addEventListener('DOMContentLoaded', function() {
+        // Control del menú hamburguesa
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu-container');
+        
+        // Abrir/cerrar menú
+        menuToggle.addEventListener('click', function() {
+            this.setAttribute('aria-expanded', mobileMenu.classList.toggle('active'));
+        });
+        
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
             });
         });
-    </script>
+        
+        // Código existente para cambiar entre carreras
+        const menuButtons = document.querySelectorAll('.cbta97-menu-btn');
+        const careerContainers = document.querySelectorAll('.cbta97-carrera-container');
+        
+        function switchCareer(selectedCareer) {
+            menuButtons.forEach(btn => btn.classList.remove('cbta97-active'));
+            selectedCareer.classList.add('cbta97-active');
+            
+            careerContainers.forEach(container => {
+                container.style.display = 'none';
+                container.classList.remove('cbta97-active');
+            });
+            
+            const target = document.getElementById(selectedCareer.dataset.carrera);
+            if (target) {
+                target.style.display = 'block';
+                target.classList.add('cbta97-active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+        
+        document.querySelectorAll('.cbta97-menu-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                switchCareer(this);
+            });
+        });
+    });
+</script>
 </body>
 </html>
