@@ -1030,6 +1030,7 @@ a:focus, button:focus {
 
 
 
+
 @media (max-width: 480px) {
     :root {
         --espacio-seccion: 60px;
