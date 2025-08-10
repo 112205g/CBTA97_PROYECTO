@@ -403,7 +403,7 @@ nav ul li a:focus {
     background: rgba(44, 138, 58, 0.05);
     backdrop-filter: blur(5px);
     border-left: 4px solid var(--color-primario);
-    padding: 2rem;
+    padding: 0.5rem;
     border-radius: 0 var(--radio-borde-grande) var(--radio-borde-grande) 0;
     margin: 2rem 0;
     border: 1px solid rgba(44, 138, 58, 0.1);
@@ -779,24 +779,6 @@ footer::before {
 }
 
 /* Estilos para el menú hamburguesa */
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    z-index: 1001;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transicion);
-}
-
 .menu-toggle:hover {
     background: rgba(255, 255, 255, 0.3);
 }
