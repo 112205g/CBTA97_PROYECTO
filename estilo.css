@@ -550,16 +550,6 @@ nav ul li a:focus {
 }
 
 /* Sección de contacto llamativa */
-.cbta97-contacto {
-    text-align: center;
-    padding: 3rem 2rem;
-    background: var(--degradado-primario);
-    color: white;
-    border-radius: var(--radio-borde-grande);
-    margin-top: 3rem;
-    position: relative;
-    overflow: hidden;
-}
 
 .cbta97-contacto::before {
     content: '';
