@@ -4,472 +4,854 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CBTA 97 - Educación Tecnológica Agropecuaria</title>
-    <meta name="description" content="Centro de Bachillerato Tecnológico Agropecuario No. 97 - Formación técnica especializada en agricultura, informática y administración">
+    <meta name="description" content="Centro de Bachillerato Tecnológico Agropecuario No. 97 - Formación técnica especializada en agricultura y ganadería">
     <meta name="keywords" content="CBTA 97, educación agropecuaria, bachillerato tecnológico, carreras técnicas">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-<header>
-    <div class="header-container">
-        <div class="logo">
-            <img src="imagenes/WhatsApp Image 2023-07-05 at 10.49.51 PM - Editado (2).png" alt="Logo CBTA 97">
-            <h1>CBTA 97</h1>
-        </div>
-        
-        <!-- Menú desktop (visible en pantallas grandes) -->
-        <nav class="desktop-nav" aria-label="Navegación principal">
-            <ul>
-                <li><a href="#inicio" aria-current="page">Inicio</a></li>
-                <li><a href="#oferta-educativa">Oferta Educativa</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="">Acerca de</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Botón hamburguesa (solo móvil) -->
-        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-            <i class="fas fa-bars"></i>
-        </button>
-        
-        <!-- Menú móvil integrado en el header -->
-        <div class="mobile-menu-container">
-            <nav class="mobile-nav" aria-label="Navegación móvil">
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="imagenes/WhatsApp Image 2023-07-05 at 10.49.51 PM - Editado (2).png" alt="Logo CBTA 97" class="animate-float">
+                <h1>CBTA 97</h1>
+            </div>
+            
+            <nav class="desktop-nav">
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#oferta-educativa">Oferta Educativa</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#carreras">Carreras</a></li>
                     <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="">Acerca de</a></li>
                 </ul>
             </nav>
+            
+            <div class="menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </div>
-</header>
+        
+        <!-- Overlay para menú móvil -->
+        <div class="mobile-nav-overlay" onclick="closeMobileMenu()"></div>
+        
+        <!-- Menú móvil lateral -->
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#inicio" onclick="closeMobileMenu()">Inicio</a></li>
+                <li><a href="#nosotros" onclick="closeMobileMenu()">Nosotros</a></li>
+                <li><a href="#carreras" onclick="closeMobileMenu()">Carreras</a></li>
+                <li><a href="#contacto" onclick="closeMobileMenu()">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="hero" id="inicio" aria-labelledby="hero-heading">
-        <div class="hero-content fade-in">
-            <h2 id="hero-heading">Formación técnica de calidad en el sector agropecuario</h2>
-            <p>Prepárate para los desafíos del futuro con nuestras carreras técnicas especializadas</p>
+    <!-- Hero Section Espectacular -->
+    <section class="hero" id="inicio">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fadeInUp">
+                <i class="fas fa-star"></i> Educación de Excelencia desde 1977
+            </div>
+            <h1 class="animate-fadeInUp">Transforma tu Futuro en el Campo</h1>
+            <p class="subtitle animate-fadeInUp">Centro de Bachillerato Tecnológico Agropecuario No. 97 - Formando líderes del sector agropecuario con tecnología de vanguardia</p>
+            <div class="hero-cta animate-fadeInUp">
+                <a href="#carreras" class="cta-btn cta-primary">
+                    <i class="fas fa-graduation-cap"></i>
+                    Conoce nuestras carreras
+                </a>
+                <a href="#contacto" class="cta-btn cta-secondary">
+                    <i class="fas fa-phone"></i>
+                    Contáctanos
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Sección de Estadísticas -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-item loading">
+                    <div class="stat-icon animate-float">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-number" data-count="47">0</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+                <div class="stat-item loading">
+                    <div class="stat-icon animate-float">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="stat-number" data-count="000">000</div>
+                    <div class="stat-label">Egresados Exitosos</div>
+                </div>
+                <div class="stat-item loading">
+                    <div class="stat-icon animate-float">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="stat-number" data-count="4">0</div>
+                    <div class="stat-label">Carreras Técnicas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Por qué elegirnos -->
+    <section class="why-choose-us" id="nosotros">
+        <div class="section-header">
+            <div class="section-badge animate-fadeInUp">¿Por qué CBTA 97?</div>
+            <h2 class="section-title animate-fadeInUp">La mejor educación agropecuaria</h2>
+            <p class="section-subtitle animate-fadeInUp">Formamos profesionales técnicos con las competencias necesarias para liderar el sector agropecuario del futuro</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card loading">
+                <div class="feature-icon animate-pulse">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <h3 class="feature-title">Laboratorios Especializados</h3>
+                <p class="feature-description">Contamos con laboratorios de última generación equipados con tecnología moderna para análisis de suelos, aguas y control de calidad alimentaria.</p>
+            </div>
+            
+            <div class="feature-card loading">
+                <div class="feature-icon animate-pulse">
+                    <i class="fas fa-tractor"></i>
+                </div>
+                <h3 class="feature-title">Campos Experimentales</h3>
+                <p class="feature-description">Amplias extensiones de terreno para práctica directa en cultivos, ganadería y técnicas de producción sustentable.</p>
+            </div>
+            
+            <div class="feature-card loading">
+                <div class="feature-icon animate-pulse">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3 class="feature-title">Docentes Especializados</h3>
+                <p class="feature-description">Profesores con amplia experiencia en el sector agropecuario y formación pedagógica actualizada.</p>
+            </div>
+            
+            <div class="feature-card loading">
+                <div class="feature-icon animate-pulse">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3 class="feature-title">Vinculación Empresarial</h3>
+                <p class="feature-description">Convenios con empresas del sector para prácticas profesionales y oportunidades laborales inmediatas.</p>
+            </div>
+            
+            <div class="feature-card loading">
+                <div class="feature-icon animate-pulse">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3 class="feature-title">Enfoque Sustentable</h3>
+                <p class="feature-description">Formación integral con conciencia ecológica y técnicas de producción responsables con el medio ambiente.</p>
+            </div>
+            
+            <div class="feature-card loading">
+                <div class="feature-icon animate-pulse">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="feature-title">Innovación Tecnológica</h3>
+                <p class="feature-description">Incorporación de nuevas tecnologías como drones, sensores IoT y sistemas automatizados en la educación.</p>
+            </div>
         </div>
     </section>
 
-    <div class="cbta97-menu-carreras">
-        <nav>
-            <a  class="cbta97-menu-btn" data-carrera="cbta97-agricola"><i class="fas fa-seedling"></i> Producción Agrícola</a>
-            <a  class="cbta97-menu-btn cbta97-active" data-carrera="cbta97-pecuaria"><i class="fas fa-paw"></i> Producción Pecuaria</a>
-        </nav>
-    </div>
-    
-    <!-- Carrera de Producción Agrícola -->
-    <div id="cbta97-agricola" class="cbta97-carrera-container" style="display: none;">
-        <section class="cbta97-hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
-            <h1>Técnico en Sistemas de Producción Agrícola</h1>
-            <p>Formamos profesionales capaces de transformar el campo con técnicas modernas y sustentables</p>
-        </section>
-        
-        <div class="cbta97-container">
-            <div class="cbta97-card">
-                <h2>¿Qué aprenderás en esta carrera?</h2>
-                <p>Nuestro programa forma técnicos especializados en producción agrícola sostenible, combinando conocimientos científicos con prácticas reales en nuestros campos experimentales.</p>
-                
-                <div class="cbta97-highlight-box">
-                    <h3>Competencias profesionales que desarrollarás</h3>
+    <!-- Sección de Carreras -->
+    <section class="careers-section" id="carreras">
+        <div class="section-header">
+            <div class="section-badge animate-fadeInUp">Oferta Educativa</div>
+            <h2 class="section-title animate-fadeInUp">Nuestras Carreras Técnicas</h2>
+            <p class="section-subtitle animate-fadeInUp">Elige la especialidad que transformará tu futuro profesional</p>
+        </div>
+
+        <div class="careers-menu">
+            <nav class="careers-nav">
+                <a href="#" class="career-btn active" data-career="agricola">
+                    <i class="fas fa-seedling"></i>
+                    <span>Producción Agrícola</span>
+                </a>
+                <a href="#" class="career-btn" data-career="pecuaria">
+                    <i class="fas fa-paw"></i>
+                    <span>Producción Pecuaria</span>
+                </a>
+                <a href="#" class="career-btn" data-career="computo">
+                    <i class="fas fa-laptop"></i>
+                    <span>Soporte y Mant. de Cómputo</span>
+                </a>
+                <a href="#" class="career-btn" data-career="desarrollo-comunitario">
+                    <i class="fas fa-users"></i>
+                    <span>Desarrollo Comunitario</span>
+                </a>
+            </nav>
+        </div>
+
+  <!-- Carrera Agrícola -->
+        <div id="agricola" class="career-container active">
+            <div class="career-hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(44,138,58,0.5)), url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3')">
+                <div class="career-hero-content">
+                    <h1>Técnico en Sistemas de Producción Agrícola</h1>
+                    <p>Conviértete en un experto en agricultura moderna y sustentable con las técnicas más avanzadas del sector</p>
+                </div>
+            </div>
+
+            <div class="info-container">
+                <div class="info-card loading">
+                    <h2>¿Qué aprenderás?</h2>
+                    <p>Desarrollarás competencias profesionales para liderar proyectos agrícolas innovadores y sustentables, combinando conocimiento científico con práctica real.</p>
                     
-                    <div class="cbta97-competencia">
-                        <div class="cbta97-competencia-icon">
+                    <div class="competency loading">
+                        <div class="competency-icon">
                             <i class="fas fa-users"></i>
                         </div>
-                        <div>
-                            <h4>Organización de grupos de producción</h4>
-                            <p>Aprenderás a liderar y coordinar equipos de trabajo agrícola, optimizando recursos y procesos para una producción eficiente.</p>
+                        <div class="competency-content">
+                            <h4>Organización de Grupos de Producción</h4>
+                            <p>Liderazgo y coordinación de equipos agrícolas, optimización de recursos humanos y técnicos para maximizar la productividad.</p>
                         </div>
                     </div>
-                    
-                    <div class="cbta97-competencia">
-                        <div class="cbta97-competencia-icon">
+
+                    <div class="competency loading">
+                        <div class="competency-icon">
                             <i class="fas fa-flask"></i>
                         </div>
-                        <div>
-                            <h4>Análisis de suelos y aguas</h4>
-                            <p>Realizarás análisis fisicoquímicos y biológicos para determinar las condiciones óptimas de cultivo y selección de especies.</p>
+                        <div class="competency-content">
+                            <h4>Análisis de Suelos y Aguas</h4>
+                            <p>Técnicas avanzadas de análisis fisicoquímico y biológico para determinar condiciones óptimas de cultivo y selección de especies.</p>
                         </div>
                     </div>
-                    
-                    <div class="cbta97-competencia">
-                        <div class="cbta97-competencia-icon">
+
+                    <div class="competency loading">
+                        <div class="competency-icon">
                             <i class="fas fa-tractor"></i>
                         </div>
-                        <div>
-                            <h4>Técnicas de cultivo</h4>
-                            <p>Dominarás métodos de siembra, cultivo y cosecha adaptados a diferentes tipos de productos agrícolas y condiciones ambientales.</p>
+                        <div class="competency-content">
+                            <h4>Técnicas de Cultivo Modernas</h4>
+                            <p>Dominio de métodos innovadores de siembra, cultivo y cosecha adaptados a diferentes condiciones ambientales y tipos de productos.</p>
                         </div>
                     </div>
-                    
-                    <div class="cbta97-competencia">
-                        <div class="cbta97-competencia-icon">
-                            <i class="fas fa-bug"></i>
-                        </div>
-                        <div>
-                            <h4>Control sustentable de plagas</h4>
-                            <p>Implementarás técnicas ecológicas para el manejo integrado de plagas, minimizando el impacto ambiental.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="cbta97-competencia">
-                        <div class="cbta97-competencia-icon">
-                            <i class="fas fa-clipboard-check"></i>
-                        </div>
-                        <div>
-                            <h4>Gestión de cosechas</h4>
-                            <p>Planificarás y ejecutarás procesos de cosecha según los estándares de calidad requeridos por el mercado.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="cbta97-card">
-                <h2>¿Dónde podrás trabajar?</h2>
-                <p>Nuestros egresados se desempeñan con éxito en diversos ámbitos del sector agrícola:</p>
-                
-                <div class="cbta97-campo-laboral">
-                    <div class="cbta97-campo-item">
-                        <i class="fas fa-building"></i>
-                        <span>Empresas agrícolas comerciales</span>
-                    </div>
-                    <div class="cbta97-campo-item">
-                        <i class="fas fa-landmark"></i>
-                        <span>Dependencias gubernamentales</span>
-                    </div>
-                    <div class="cbta97-campo-item">
-                        <i class="fas fa-leaf"></i>
-                        <span>Consultoría ambiental</span>
-                    </div>
-                    <div class="cbta97-campo-item">
-                        <i class="fas fa-seedling"></i>
-                        <span>Viveros e invernaderos</span>
-                    </div>
-                    <div class="cbta97-campo-item">
-                        <i class="fas fa-flask"></i>
-                        <span>Laboratorios de análisis</span>
-                    </div>
-                    <div class="cbta97-campo-item">
-                        <i class="fas fa-user-tie"></i>
-                        <span>Asesoría técnica independiente</span>
-                    </div>
-                </div>
-                
-                <p>Además, podrás participar en proyectos de desarrollo rural, organizar cooperativas agrícolas o emprender tu propio negocio en el sector.</p>
-            </div>
-            
-            <div class="cbta97-card">
-                <h2>¿Es esta carrera para ti?</h2>
-                
-                <h3>Perfil del aspirante ideal</h3>
-                <ul class="cbta97-perfil-list">
-                    <li>Interés en las ciencias fisicoquímicas y biológicas</li>
-                    <li>Gusto por la agricultura y el trabajo al aire libre</li>
-                    <li>Preocupación por el medio ambiente y sustentabilidad</li>
-                    <li>Capacidad para trabajar en equipo</li>
-                    <li>Responsabilidad y seguimiento de protocolos</li>
-                    <li>Habilidades de comunicación y liderazgo</li>
-                </ul>
-                
-                <h3>Beneficios de estudiar con nosotros</h3>
-                <div class="cbta97-highlight-box">
-                    <p>En el Centro de Bachillerato Tecnológico Agropecuario No. 97 combinamos la formación teórica con práctica real en nuestros campos experimentales, donde los estudiantes aplican directamente los conocimientos adquiridos.</p>
-                    <p>Al egresar, recibirás tu certificado de bachillerato y podrás tramitar tu título como Técnico en Sistemas de Producción Agrícola, con el que podrás incorporarte al mercado laboral o continuar tus estudios a nivel superior.</p>
-                </div>
-            </div>
-            
-            <div class="cbta97-card">
-                <h2>Plan de estudios</h2>
-                
-                <div class="cbta97-duracion-info">
-                    <div class="cbta97-duracion-item">
-                        <i class="far fa-calendar-alt"></i>
-                        <h4>Duración</h4>
-                        <p>3 años (6 semestres)</p>
-                    </div>
-                    
-                    <div class="cbta97-duracion-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h4>Inicio de especialidad</h4>
-                        <p>Segundo semestre</p>
-                    </div>
-                    
-                    <div class="cbta97-duracion-item">
-                        <i class="fas fa-certificate"></i>
-                        <h4>Certificaciones</h4>
-                        <p>SEP</p>
-                    </div>
-                </div>
-                
-                <h3>Formación integral</h3>
-                <p>Nuestro plan combina asignaturas del tronco común de bachillerato con materias especializadas en producción agrícola:</p>
-                <ul class="cbta97-perfil-list">
-                    <li>Bachillerato completo con validez oficial</li>
-                    <li>Especialidad técnica con alta demanda laboral</li>
-                    <li>Preparación para estudios universitarios</li>
-                    <li>Enfoque en agricultura sustentable</li>
-                    <li>Desarrollo de habilidades emprendedoras</li>
-                </ul>
-            </div>
-            
-        </div>
-    </div>
-    
-    <!-- Carrera de Producción Pecuaria -->
-    <div id="cbta97-pecuaria" class="cbta97-carrera-container">
-        <section class="cbta97-hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1470114716159-e389f8712fda?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
-            <h1>Técnico en Producción Pecuaria</h1>
-            <p>Formamos profesionales capaces de gestionar sistemas productivos animales con técnicas modernas y sustentables</p>
-        </section>
-        
-        <div class="cbta97-container">
-            <div class="cbta97-card">
-                <h2>¿Qué aprenderás en esta carrera?</h2>
-                <p>Nuestro programa forma técnicos especializados en la crianza, manejo y producción de animales, combinando conocimientos científicos con prácticas reales en nuestras instalaciones pecuarias.</p>
-                
-                <div class="cbta97-highlight-box">
-                    <h3>Competencias profesionales que desarrollarás</h3>
-                    
-                    <div class="cbta97-competencia">
-                        <div class="cbta97-competencia-icon">
-                            <i class="fas fa-paw"></i>
-                        </div>
-                        <div>
-                            <h4>Manejo de especies pecuarias</h4>
-                            <p>Aprenderás técnicas profesionales para el manejo de diferentes animales de producción, incluyendo métodos de contención segura y mantenimiento de instalaciones pecuarias.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="cbta97-competencia">
-                        <div class="cbta97-competencia-icon">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <div>
-                            <h4>Nutrición animal</h4>
-                            <p>Dominarás la formulación de dietas balanceadas para diferentes especies, analizando tablas de requerimientos nutricionales y aprendiendo sobre alimentación de monogástricos y poligástricos.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="cbta97-competencia">
-                        <div class="cbta97-competencia-icon">
+
+                    <div class="competency loading">
+                        <div class="competency-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <div>
-                            <h4>Bioseguridad y sanidad</h4>
-                            <p>Implementarás protocolos de bioseguridad en granjas, prevención de enfermedades y manejo sanitario para garantizar la salud animal y la calidad de los productos.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="cbta97-competencia">
-                        <div class="cbta97-competencia-icon">
-                            <i class="fas fa-clinic-medical"></i>
-                        </div>
-                        <div>
-                            <h4>Atención veterinaria básica</h4>
-                            <p>Realizarás procedimientos veterinarios básicos incluyendo cirugías menores, primeros auxilios y participación en programas reproductivos.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="cbta97-competencia">
-                        <div class="cbta97-competencia-icon">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <div>
-                            <h4>Gestión de proyectos</h4>
-                            <p>Desarrollarás habilidades para diseñar, planificar y ejecutar proyectos productivos pecuarios viables y sustentables.</p>
+                        <div class="competency-content">
+                            <h4>Control Integrado de Plagas</h4>
+                            <p>Implementación de técnicas ecológicas y sustentables para el manejo de plagas, minimizando el impacto ambiental.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="cbta97-card">
-                <h2>¿Dónde podrás trabajar?</h2>
-                <p>Nuestros egresados se desempeñan con éxito en diversos ámbitos del sector pecuario:</p>
-                
-                <div class="cbta97-campo-laboral">
-                    <div class="cbta97-campo-item">
-                        <i class="fas fa-piggy-bank"></i>
-                        <span>Granjas porcícolas y avícolas</span>
-                    </div>
-                    <div class="cbta97-campo-item">
-                        <i class="fas fa-cheese"></i>
-                        <span>Industria láctea y cárnica</span>
-                    </div>
-                    <div class="cbta97-campo-item">
-                        <i class="fas fa-clinic-medical"></i>
-                        <span>Clínicas veterinarias</span>
-                    </div>
-                    <div class="cbta97-campo-item">
-                        <i class="fas fa-warehouse"></i>
-                        <span>Empresas de alimentos balanceados</span>
-                    </div>
-                    <div class="cbta97-campo-item">
-                        <i class="fas fa-tractor"></i>
-                        <span>Empresas agropecuarias</span>
-                    </div>
-                    <div class="cbta97-campo-item">
-                        <i class="fas fa-user-tie"></i>
-                        <span>Asesoría técnica independiente</span>
-                    </div>
-                </div>
-                
-                <p>Además, podrás trabajar en instituciones gubernamentales relacionadas con el sector agropecuario o emprender tu propio negocio en el ramo.</p>
-            </div>
-            
-            <div class="cbta97-card">
-                <h2>¿Es esta carrera para ti?</h2>
-                
-                <h3>Perfil del aspirante ideal</h3>
-                <ul class="cbta97-perfil-list">
-                    <li>Gusto por el trabajo con animales y el campo</li>
-                    <li>Interés en las ciencias biológicas y químicas</li>
-                    <li>Capacidad para trabajar en equipo</li>
-                    <li>Responsabilidad y seguimiento de normas</li>
-                    <li>Habilidades de observación y análisis</li>
-                    <li>Disposición para el trabajo práctico al aire libre</li>
-                </ul>
-                
-                <h3>Beneficios de estudiar con nosotros</h3>
-                <div class="cbta97-highlight-box">
-                    <p>En el Centro de Bachillerato Tecnológico Agropecuario No. 97 combinamos la formación teórica con práctica real en nuestras instalaciones pecuarias, donde los estudiantes trabajan directamente con animales bajo la supervisión de profesionales experimentados.</p>
-                    <p>Al egresar, recibirás tu certificado de bachillerato y podrás tramitar tu título como Técnico en Producción Pecuaria, con el que podrás incorporarte al mercado laboral o continuar tus estudios a nivel superior.</p>
-                </div>
-            </div>
-            
-            <div class="cbta97-card">
-                <h2>Plan de estudios</h2>
-                
-                <div class="cbta97-duracion-info">
-                    <div class="cbta97-duracion-item">
-                        <i class="far fa-calendar-alt"></i>
-                        <h4>Duración</h4>
-                        <p>3 años (6 semestres)</p>
-                    </div>
+
+                <div class="info-card loading">
+                    <h2>Campo Laboral</h2>
+                    <p>Nuestros egresados trabajan en diversos sectores del agro moderno:</p>
                     
-                    <div class="cbta97-duracion-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h4>Inicio de especialidad</h4>
-                        <p>Segundo semestre</p>
-                    </div>
-                    
-                    <div class="cbta97-duracion-item">
-                        <i class="fas fa-certificate"></i>
-                        <h4>Certificaciones</h4>
-                        <p>SEP + SAGARPA</p>
+                    <div class="job-field-grid">
+                        <div class="job-field-item loading">
+                            <i class="fas fa-building"></i>
+                            <span>Empresas Agrícolas Comerciales</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-landmark"></i>
+                            <span>Instituciones Gubernamentales</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-leaf"></i>
+                            <span>Consultoría Ambiental</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-seedling"></i>
+                            <span>Viveros e Invernaderos</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-microscope"></i>
+                            <span>Laboratorios de Análisis</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-rocket"></i>
+                            <span>Emprendimiento Agrícola</span>
+                        </div>
                     </div>
                 </div>
-                
-                <h3>Formación integral</h3>
-                <p>Nuestro plan combina asignaturas del tronco común de bachillerato con materias especializadas en producción animal, lo que permite a nuestros estudiantes:</p>
-                <ul class="cbta97-perfil-list">
-                    <li>Obtener su certificado de bachillerato</li>
-                    <li>Adquirir una carrera técnica con alta demanda laboral</li>
-                    <li>Prepararse para continuar estudios universitarios</li>
-                    <li>Desarrollar habilidades emprendedoras</li>
-                </ul>
             </div>
         </div>
-    </div>
 
+<!-- Carrera Pecuaria -->
+        <div id="pecuaria" class="career-container">
+            <div class="career-hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(44,138,58,0.5)), url('https://images.unsplash.com/photo-1470114716159-e389f8712fda?ixlib=rb-4.0.3')">
+                <div class="career-hero-content">
+                    <h1>Técnico en Producción Pecuaria</h1>
+                    <p>Especialízate en la crianza y manejo profesional de animales con técnicas modernas y sustentables</p>
+                </div>
+            </div>
+
+            <div class="info-container">
+                <div class="info-card loading">
+                    <h2>¿Qué aprenderás?</h2>
+                    <p>Desarrollarás expertise en el manejo integral de sistemas pecuarios, desde la nutrición animal hasta la gestión de instalaciones especializadas.</p>
+                    
+                    <div class="competency loading">
+                        <div class="competency-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <div class="competency-content">
+                            <h4>Manejo Profesional de Species</h4>
+                            <p>Técnicas avanzadas para el manejo de diferentes animales de producción, métodos de contención y diseño de instalaciones.</p>
+                        </div>
+                    </div>
+
+                    <div class="competency loading">
+                        <div class="competency-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="competency-content">
+                            <h4>Nutrición Animal Especializada</h4>
+                            <p>Formulación de dietas balanceadas, análisis de requerimientos nutricionales y alimentación de monogástricos y rumiantes.</p>
+                        </div>
+                    </div>
+
+                    <div class="competency loading">
+                        <div class="competency-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="competency-content">
+                            <h4>Bioseguridad y Sanidad</h4>
+                            <p>Protocolos avanzados de bioseguridad, prevención de enfermedades y manejo sanitario integral de granjas.</p>
+                        </div>
+                    </div>
+
+                    <div class="competency loading">
+                        <div class="competency-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="competency-content">
+                            <h4>Atención Veterinaria Básica</h4>
+                            <p>Procedimientos veterinarios básicos, primeros auxilios y participación en programas reproductivos especializados.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card loading">
+                    <h2>Campo Laboral</h2>
+                    <p>Amplias oportunidades en el sector pecuario:</p>
+                    
+                    <div class="job-field-grid">
+                        <div class="job-field-item loading">
+                            <i class="fas fa-warehouse"></i>
+                            <span>Granjas Comerciales</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-industry"></i>
+                            <span>Industria Cárnica y Láctea</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-clinic-medical"></i>
+                            <span>Clínicas Veterinarias</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-cubes"></i>
+                            <span>Empresas de Alimentos</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Asesoría Técnica</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-handshake"></i>
+                            <span>Cooperativas Ganaderas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Carrera de Soporte y Mantenimiento de Cómputo -->
+        <div id="computo" class="career-container">
+            <div class="career-hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(30,144,255,0.5)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3')">
+                <div class="career-hero-content">
+                    <h1>Técnico en Soporte y Mantenimiento de Equipo de Cómputo</h1>
+                    <p>Conviértete en un especialista en tecnología con habilidades para el futuro digital</p>
+                </div>
+            </div>
+
+            <div class="info-container">
+                <div class="info-card loading">
+                    <h2>¿Qué aprenderás?</h2>
+                    <p>Desarrollarás competencias tecnológicas avanzadas para el mantenimiento, configuración y soporte de sistemas computacionales modernos.</p>
+                    
+                    <div class="competency loading">
+                        <div class="competency-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="competency-content">
+                            <h4>Mantenimiento de Hardware</h4>
+                            <p>Diagnóstico, reparación y mantenimiento preventivo y correctivo de equipos de cómputo, periféricos y componentes electrónicos.</p>
+                        </div>
+                    </div>
+
+                    <div class="competency loading">
+                        <div class="competency-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="competency-content">
+                            <h4>Administración de Sistemas</h4>
+                            <p>Instalación, configuración y administración de sistemas operativos, redes locales y software especializado.</p>
+                        </div>
+                    </div>
+
+                    <div class="competency loading">
+                        <div class="competency-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="competency-content">
+                            <h4>Seguridad Informática</h4>
+                            <p>Implementación de medidas de seguridad, respaldo de información y protección contra amenazas digitales.</p>
+                        </div>
+                    </div>
+
+                    <div class="competency loading">
+                        <div class="competency-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="competency-content">
+                            <h4>Redes y Conectividad</h4>
+                            <p>Configuración de redes locales, conectividad inalámbrica y solución de problemas de comunicación.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card loading">
+                    <h2>Campo Laboral</h2>
+                    <p>Amplias oportunidades en el sector tecnológico:</p>
+                    
+                    <div class="job-field-grid">
+                        <div class="job-field-item loading">
+                            <i class="fas fa-building"></i>
+                            <span>Empresas de Tecnología</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-hospital"></i>
+                            <span>Instituciones de Salud</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-school"></i>
+                            <span>Instituciones Educativas</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-store"></i>
+                            <span>Centros de Servicio Técnico</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Freelance y Consultoría</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-rocket"></i>
+                            <span>Emprendimiento Tecnológico</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carrera de Desarrollo Comunitario -->
+        <div id="desarrollo-comunitario" class="career-container">
+            <div class="career-hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(255,165,0,0.5)), url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3')">
+                <div class="career-hero-content">
+                    <h1>Técnico en Desarrollo Comunitario</h1>
+                    <p>Forma parte del cambio social y mejora la calidad de vida de las comunidades</p>
+                </div>
+            </div>
+
+            <div class="info-container">
+                <div class="info-card loading">
+                    <h2>¿Qué aprenderás?</h2>
+                    <p>Desarrollarás habilidades para promover el desarrollo integral de comunidades rurales y urbanas mediante proyectos sustentables.</p>
+                    
+                    <div class="competency loading">
+                        <div class="competency-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="competency-content">
+                            <h4>Organización Comunitaria</h4>
+                            <p>Técnicas de liderazgo, coordinación de grupos y promoción de la participación ciudadana en proyectos de desarrollo.</p>
+                        </div>
+                    </div>
+
+                    <div class="competency loading">
+                        <div class="competency-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="competency-content">
+                            <h4>Gestión de Proyectos Sociales</h4>
+                            <p>Diseño, implementación y evaluación de proyectos comunitarios sustentables y de impacto social positivo.</p>
+                        </div>
+                    </div>
+
+                    <div class="competency loading">
+                        <div class="competency-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="competency-content">
+                            <h4>Mediación y Resolución de Conflictos</h4>
+                            <p>Técnicas de comunicación, negociación y mediación para resolver conflictos comunitarios de manera pacífica.</p>
+                        </div>
+                    </div>
+
+                    <div class="competency loading">
+                        <div class="competency-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="competency-content">
+                            <h4>Diagnóstico y Evaluación Social</h4>
+                            <p>Análisis de necesidades comunitarias, elaboración de diagnósticos sociales y evaluación de impacto de proyectos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card loading">
+                    <h2>Campo Laboral</h2>
+                    <p>Múltiples oportunidades en el sector social:</p>
+                    
+                    <div class="job-field-grid">
+                        <div class="job-field-item loading">
+                            <i class="fas fa-landmark"></i>
+                            <span>Gobierno Municipal y Estatal</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-heart"></i>
+                            <span>ONGs y Fundaciones</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-home"></i>
+                            <span>Programas de Vivienda</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-leaf"></i>
+                            <span>Proyectos Ambientales</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Programas Educativos</span>
+                        </div>
+                        <div class="job-field-item loading">
+                            <i class="fas fa-hands-helping"></i>
+                            <span>Asistencia Social</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Mejorado -->
     <footer id="contacto">
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>Contacto</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Ave. Canal La Paz S/N, Col. Centro, C.P. 12345</p>
-                    <p><i class="fas fa-phone"></i> 647) 427 0607 / (647) 427 0971</p>
-                    <p><i class="fas fa-envelope"></i> cbta097sonora@yahoo.com.mx</p>
-                    <p><i class="fas fa-clock"></i> Lunes a Viernes: 7:00 - 3:00</p>
+                    <h3>CBTA 97</h3>
+                    <p>Formando líderes del sector agropecuario con excelencia académica y valores humanos desde 1977. Educación técnica de calidad para el futuro del campo.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/97CBTAOFICIAL" class="social-link" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/cbta_97" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="mailto:cbta097sonora@yahoo.com.mx" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
                 
                 <div class="footer-col">
-                    <h3>Síguenos</h3>
-                    <p>Formando profesionales técnicos con excelencia académica y valores humanos desde 1977.</p>
-                    <ul class="wrapper">
-                        <a href="https://www.facebook.com/97CBTAOFICIAL?mibextid=ZbWKwL">
-                        <li class="icon facebook">
-                            <span class="tooltip">Facebook</span>
-                            <span class="sr-only">Facebook</span>
-                            <svg viewBox="0 0 320 512" height="1.2em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
-                            </svg>
-                        </li>
-                        </a>
-                        
-                        <a href="https://www.instagram.com/cbta_97?igsh=MXB1Z3c4OWhkenQ1Nw==">
-                        <li class="icon instagram">
-                            
-                            <span class="tooltip">Instagram</span>
-                            
-                            <span class="sr-only">Instagram</span>
-                            
-                            <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
-                            </svg>
-                            
-                        </li>
-                        </a>
-                    </ul>
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Ave. Canal La Paz S/N, Col. Centro</p>
+                    <p><i class="fas fa-phone"></i> (647) 427 0607</p>
+                    <p><i class="fas fa-phone"></i> (647) 427 0971</p>
+                    <p><i class="fas fa-envelope"></i> cbta097sonora@yahoo.com.mx</p>
+                    <p><i class="fas fa-clock"></i> Lunes a Viernes: 7:00 - 15:00</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <p><a href="#inicio">Inicio</a></p>
+                    <p><a href="#nosotros">Nosotros</a></p>
+                    <p><a href="#carreras">Carreras</a></p>
+                    <p><a href="#contacto">Contacto</a></p>
+                    <p><a href="#">Admisiones</a></p>
+                    <p><a href="#">Biblioteca</a></p>
                 </div>
             </div>
             
             <div class="copyright">
                 <p>&copy; 2025 Centro de Bachillerato Tecnológico Agropecuario No. 97. Todos los derechos reservados.</p>
-                <p>Diseñado con pasión por la educación tecnológica.</p>
+                <p>Diseñado con 💚 para la educación técnica agropecuaria</p>
             </div>
         </div>
     </footer>
 
+    <!-- Script se mantiene igual -->
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Control del menú hamburguesa
-        const menuToggle = document.querySelector('.menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu-container');
-        
-        // Abrir/cerrar menú
-        menuToggle.addEventListener('click', function() {
-            this.setAttribute('aria-expanded', mobileMenu.classList.toggle('active'));
+        // Inicialización del sitio
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeParticles();
+            setupIntersectionObserver();
+            setupCareerSwitching();
+            setupCounterAnimation();
+            setupSmoothScrolling();
+            setupMobileMenu();
+            setupParallaxEffects();
         });
-        
-        // Cerrar menú al hacer clic en un enlace
-        document.querySelectorAll('.mobile-nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                menuToggle.setAttribute('aria-expanded', 'false');
-            });
-        });
-        
-        // Código existente para cambiar entre carreras
-        const menuButtons = document.querySelectorAll('.cbta97-menu-btn');
-        const careerContainers = document.querySelectorAll('.cbta97-carrera-container');
-        
-        function switchCareer(selectedCareer) {
-            menuButtons.forEach(btn => btn.classList.remove('cbta97-active'));
-            selectedCareer.classList.add('cbta97-active');
+
+        // Sistema de partículas para el hero
+        function initializeParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
             
-            careerContainers.forEach(container => {
-                container.style.display = 'none';
-                container.classList.remove('cbta97-active');
-            });
-            
-            const target = document.getElementById(selectedCareer.dataset.carrera);
-            if (target) {
-                target.style.display = 'block';
-                target.classList.add('cbta97-active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Posición aleatoria
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                
+                // Tamaño aleatorio
+                const size = Math.random() * 4 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                
+                // Retraso de animación aleatorio
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                
+                particlesContainer.appendChild(particle);
             }
         }
-        
-        document.querySelectorAll('.cbta97-menu-btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                switchCareer(this);
+
+        // Observador de intersección para animaciones
+        function setupIntersectionObserver() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('loaded');
+                        
+                        // Si es un contador, iniciar animación
+                        const statNumber = entry.target.querySelector('.stat-number');
+                        if (statNumber && !statNumber.classList.contains('animated')) {
+                            animateCounter(statNumber);
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
             });
+
+            // Observar elementos con clase loading
+            document.querySelectorAll('.loading').forEach(el => observer.observe(el));
+        }
+
+        // Animación de contadores
+        function setupCounterAnimation() {
+            // Esta función se llama desde el observador
+        }
+
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-count'));
+            const duration = 2000; // 2 segundos
+            const increment = target / (duration / 16); // 60fps
+            let current = 0;
+            
+            element.classList.add('animated');
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current);
+            }, 16);
+        }
+
+        // Sistema de cambio de carreras
+        function setupCareerSwitching() {
+            const careerButtons = document.querySelectorAll('.career-btn');
+            const careerContainers = document.querySelectorAll('.career-container');
+
+            careerButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remover clase activa de todos los botones
+                    careerButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Ocultar todos los contenedores
+                    careerContainers.forEach(container => {
+                        container.classList.remove('active');
+                    });
+                    
+                    // Mostrar contenedor seleccionado
+                    const targetCareer = this.getAttribute('data-career');
+                    const targetContainer = document.getElementById(targetCareer);
+                    if (targetContainer) {
+                        targetContainer.classList.add('active');
+                        
+                        // Reactivar animaciones
+                        const loadingElements = targetContainer.querySelectorAll('.loading');
+                        loadingElements.forEach(el => {
+                            el.classList.remove('loaded');
+                            setTimeout(() => el.classList.add('loaded'), 100);
+                        });
+                    }
+                });
+            });
+        }
+
+        // Smooth scrolling
+        function setupSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = target.offsetTop - headerHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Menú móvil mejorado
+        function setupMobileMenu() {
+            // El menú ya está configurado con los event listeners en el HTML
+        }
+
+        function toggleMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            
+            menuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Prevenir scroll del body cuando el menú está abierto
+            if (mobileNav.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        function closeMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            
+            menuToggle.classList.remove('active');
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Cerrar menú al redimensionar ventana
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMobileMenu();
+            }
         });
-    });
-</script>
+
+        // Efectos parallax
+        function setupParallaxEffects() {
+            let ticking = false;
+            
+            function updateParallax() {
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('.parallax-element');
+                
+                parallaxElements.forEach(element => {
+                    const speed = element.dataset.speed || 0.5;
+                    const yPos = -(scrolled * speed);
+                    element.style.transform = `translateY(${yPos}px)`;
+                });
+                
+                // Efecto en el header
+                const header = document.querySelector('header');
+                if (scrolled > 100) {
+                    header.style.background = 'rgba(255,255,255,0.98)';
+                    header.style.boxShadow = '0 10px 40px rgba(0,0,0,0.15)';
+                } else {
+                    header.style.background = 'rgba(255,255,255,0.95)';
+                    header.style.boxShadow = '0 8px 32px rgba(0,0,0,0.1)';
+                }
+                
+                ticking = false;
+            }
+            
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateParallax);
+                    ticking = true;
+                }
+            }
+            
+            window.addEventListener('scroll', requestTick, { passive: true });
+        }
+
+        // Efectos adicionales
+        window.addEventListener('load', function() {
+            // Marcar como cargado
+            document.body.classList.add('loaded');
+            
+            // Agregar efectos de hover mejorados
+            addHoverEffects();
+        });
+
+        function addHoverEffects() {
+            // Efecto glow en elementos importantes
+            const importantElements = document.querySelectorAll('.cta-btn, .feature-card, .career-btn');
+            
+            importantElements.forEach(element => {
+                element.addEventListener('mouseenter', function() {
+                    this.classList.add('glow');
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    this.classList.remove('glow');
+                });
+            });
+        }
+
+        // Optimización de performance
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        };
+
+        // Aplicar debounce a eventos costosos
+        const debouncedResize = debounce(() => {
+            // Reajustar elementos si es necesario
+            console.log('Window resized');
+        }, 250);
+
+        window.addEventListener('resize', debouncedResize);
+    </script>
 </body>
 </html>
