@@ -1,5 +1,5 @@
 
-        :root {
+          :root {
             --color-primario: #2c8a3a;
             --color-primario-oscuro: #1f5f28;
             --color-secundario: #f8f9fa;
@@ -1074,6 +1074,21 @@
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
+
+            /* Ajustes para sección institucional en tablets */
+            .institutional-info {
+                padding: 4rem 0 !important;
+            }
+
+            .institutional-grid {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+                padding: 0 1rem !important;
+            }
+
+            .institutional-info .info-card {
+                padding: 2rem 1.5rem !important;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1162,6 +1177,37 @@
             .job-field-item {
                 padding: 1rem;
             }
+
+            /* Estilos específicos para sección institucional en móviles */
+            .institutional-info {
+                padding: 3rem 0 !important;
+            }
+
+            .institutional-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+                padding: 0 0.5rem !important;
+                margin: 2rem auto 0 !important;
+            }
+
+            .institutional-info .info-card {
+                padding: 1.2rem 1rem !important;
+                margin-bottom: 1rem !important;
+            }
+
+            .institutional-info .competency {
+                padding: 1rem !important;
+                gap: 1rem !important;
+            }
+
+            .institutional-info .competency-content h4 {
+                font-size: 1.1rem !important;
+            }
+
+            .institutional-info .competency-content p {
+                font-size: 0.9rem !important;
+                line-height: 1.4 !important;
+            }
         }
 
         /* Efectos adicionales */
@@ -1184,4 +1230,6 @@
             opacity: 1;
             transform: translateY(0);
         }
+}
+
 
