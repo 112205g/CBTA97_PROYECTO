@@ -7,22 +7,32 @@
     <meta name="description" content="Centro de Bachillerato Tecnológico Agropecuario No. 97 - Formación técnica especializada en agricultura y ganadería">
     <meta name="keywords" content="CBTA 97, educación agropecuaria, bachillerato tecnológico, carreras técnicas">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css.css">
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="logo">
                 <img src="imagenes/WhatsApp Image 2023-07-05 at 10.49.51 PM - Editado (2).png" alt="Logo CBTA 97" class="animate-float">
-                <h1>CBTA 97</h1>
+                <h1>CBTa 97</h1>
             </div>
             
             <nav class="desktop-nav">
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#carreras">Carreras</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            Nosotros <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#anuncio">Noticias</a></li>
+                            <li><a href="#anuncios-destacados">Anuncios Destacados</a></li>
+                            <li><a href="#nosotros">¿Por qué CBTA 97?</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#carreras">Oferta Educativa</a></li>
                     <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#acerca">Acerca de</a></li>
                 </ul>
             </nav>
             
@@ -40,22 +50,24 @@
         <nav class="mobile-nav">
             <ul>
                 <li><a href="#inicio" onclick="closeMobileMenu()">Inicio</a></li>
-                <li><a href="#nosotros" onclick="closeMobileMenu()">Nosotros</a></li>
+                <li><a href="#anuncio" onclick="closeMobileMenu()">Noticias</a></li>
+                <li><a href="#anuncios-destacados" onclick="closeMobileMenu()">Anuncios Destacados</a></li>
+                <li><a href="#nosotros" onclick="closeMobileMenu()">¿Por qué CBTA 97?</a></li>
                 <li><a href="#carreras" onclick="closeMobileMenu()">Carreras</a></li>
                 <li><a href="#contacto" onclick="closeMobileMenu()">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section Espectacular -->
+    <!-- Hero Section con colores institucionales -->
     <section class="hero" id="inicio">
         <div class="hero-particles" id="particles"></div>
         <div class="hero-content">
             <div class="hero-badge animate-fadeInUp">
                 <i class="fas fa-star"></i> Educación de Excelencia desde 1977
             </div>
-            <h1 class="animate-fadeInUp">Transforma tu Futuro en el Campo</h1>
-            <p class="subtitle animate-fadeInUp">Centro de Bachillerato Tecnológico Agropecuario No. 97 - Formando líderes del sector agropecuario con tecnología de vanguardia</p>
+            <h1 class="animate-fadeInUp">Centro de Bachillerato Tecnológico Agropecuario No. 97</h1>
+            <p class="subtitle animate-fadeInUp">Transforma tu Futuro en el Campo - Formando líderes del sector agropecuario</p>
             <div class="hero-cta animate-fadeInUp">
                 <a href="#carreras" class="cta-btn cta-primary">
                     <i class="fas fa-graduation-cap"></i>
@@ -68,37 +80,179 @@
             </div>
         </div>
     </section>
+    
+    <!-- Sección de Anuncio -->
+    <section class="announcement-section" id="anuncio">
+        <div class="info-container">
+            <div class="section-header">
+                <div class="section-badge animate-fadeInUp">
+                    <i class="fas fa-bullhorn"></i> Anuncio Oficial
+                </div>
+                <h2 class="section-title animate-fadeInUp">Comunicado Importante</h2>
+                <p class="section-subtitle animate-fadeInUp">Mantente informado sobre las últimas noticias y comunicados oficiales del CBTA 97</p>
+            </div>
 
-    <!-- Sección de Estadísticas -->
+            <div class="announcement-card loading">
+                <div class="announcement-date">
+                    <i class="fas fa-calendar-alt"></i> 15 de Agosto, 2025
+                </div>
+                <h3>Inicio de Inscripciones Ciclo Escolar 2025-2026</h3>
+                <p>
+                    Nos complace anunciar que a partir del día <strong>20 de agosto de 2025</strong> estarán abiertas las inscripciones para el nuevo ciclo escolar. Invitamos a todos los interesados en formar parte de nuestra comunidad educativa a acercarse a nuestras instalaciones.
+                </p>
+                <p>
+                    <strong>Requisitos:</strong> Certificado de secundaria, acta de nacimiento, CURP, fotografías tamaño infantil y comprobante de domicilio.
+                </p>
+                <p>
+                    <strong>Horario de atención:</strong> Lunes a viernes de 7:00 AM a 3:00 PM.
+                </p>
+                <a href="#contacto" class="announcement-btn">
+                    <i class="fas fa-info-circle"></i>
+                    Más información
+                </a>
+            </div>
+
+            <div class="announcement-card loading">
+                <div class="announcement-date">
+                    <i class="fas fa-calendar-alt"></i> 10 de Agosto, 2025
+                </div>
+                <h3>Nuevos Laboratorios de Última Generación</h3>
+                <p>
+                    El CBTA 97 se enorgullece en anunciar la inauguración de sus nuevos laboratorios especializados equipados con tecnología de vanguardia para mejorar la experiencia de aprendizaje de nuestros estudiantes.
+                </p>
+                <p>
+                    Los nuevos espacios incluyen laboratorios de análisis de suelos, microbiología y biotecnología agrícola, que permitirán a nuestros alumnos desarrollar competencias prácticas con estándares internacionales.
+                </p>
+                <a href="#carreras" class="announcement-btn">
+                    <i class="fas fa-microscope"></i>
+                    Conoce nuestras instalaciones
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Anuncios Destacados -->
+    <section class="featured-announcements-section" id="anuncios-destacados">
+        <div class="info-container">
+            <div class="section-header">
+                <div class="section-badge animate-fadeInUp">
+                    <i class="fas fa-star"></i> Anuncios Destacados
+                </div>
+                <h2 class="section-title animate-fadeInUp">Eventos y Noticias Importantes</h2>
+                <p class="section-subtitle animate-fadeInUp">No te pierdas las actividades y logros más relevantes de nuestra institución</p>
+            </div>
+
+            <div class="featured-grid">
+                <div class="featured-card loading">
+                    <h3>
+                        <i class="fas fa-trophy"></i>
+                        Premio a la Excelencia Académica
+                    </h3>
+                    <p>
+                        El CBTA 97 recibió el reconocimiento a la "Excelencia en Educación Técnica Agropecuaria" otorgado por la Secretaría de Educación Pública por sus destacados resultados académicos y vinculación con el sector productivo.
+                    </p>
+                </div>
+
+                <div class="featured-card loading">
+                    <h3>
+                        <i class="fas fa-handshake"></i>
+                        Convenios con Empresas Líderes
+                    </h3>
+                    <p>
+                        Nuevos acuerdos de colaboración con empresas del sector agropecuario garantizan prácticas profesionales y oportunidades laborales inmediatas para nuestros egresados en empresas reconocidas a nivel nacional.
+                    </p>
+                </div>
+
+                <div class="featured-card loading">
+                    <h3>
+                        <i class="fas fa-seedling"></i>
+                        Proyecto de Agricultura Sustentable
+                    </h3>
+                    <p>
+                        Nuestros estudiantes desarrollan proyectos innovadores de agricultura sustentable que han sido reconocidos a nivel estatal por su impacto ambiental positivo y viabilidad económica.
+                    </p>
+                </div>
+
+                <div class="featured-card loading">
+                    <h3>
+                        <i class="fas fa-graduation-cap"></i>
+                        100% de Empleabilidad
+                    </h3>
+                    <p>
+                        Los egresados de la generación 2023-2024 alcanzaron el 100% de empleabilidad dentro
+                        </p>
+                        </div>
+                </div>
+                 </div>       
+</section>
+    <!-- Sección de Estadísticas Completamente Renovada -->
     <section class="stats-section">
         <div class="stats-container">
+            <div class="stats-header">
+                <div class="stats-badge animate-fadeInUp">
+                    <i class="fas fa-chart-line"></i> Nuestros Logros
+                </div>
+                <h2 class="stats-title animate-fadeInUp">Excelencia Educativa Comprobada</h2>
+                <p class="stats-subtitle animate-fadeInUp">Más de cuatro décadas formando profesionales técnicos que transforman el sector agropecuario de México</p>
+            </div>
+            
             <div class="stats-grid">
-                <div class="stat-item loading">
-                    <div class="stat-icon animate-float">
-                        <i class="fas fa-calendar-alt"></i>
+                <div class="stat-card loading">
+                    <div class="stat-icon-wrapper">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
                     </div>
                     <div class="stat-number" data-count="47">0</div>
                     <div class="stat-label">Años de Experiencia</div>
+                    <div class="stat-description">Desde 1977 brindando educación técnica de calidad en el sector agropecuario</div>
                 </div>
-                <div class="stat-item loading">
-                    <div class="stat-icon animate-float">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                    <div class="stat-number" data-count="2500">0</div>
-                    <div class="stat-label">Egresados Exitosos</div>
-                </div>
-                <div class="stat-item loading">
-                    <div class="stat-icon animate-float">
-                        <i class="fas fa-seedling"></i>
+                
+                <div class="stat-card loading">
+                    <div class="stat-icon-wrapper">
+                        <div class="stat-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
                     </div>
                     <div class="stat-number" data-count="5">0</div>
                     <div class="stat-label">Carreras Técnicas</div>
+                    <div class="stat-description">Especialidades diseñadas para las demandas del mercado actual</div>
+                </div>
+            </div>
+            
+            <div class="achievements">
+                <div class="achievement-item loading">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="achievement-text">Reconocimiento SEP</div>
+                </div>
+                
+                <div class="achievement-item loading">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="achievement-text">Certificación ISO 9001</div>
+                </div>
+                
+                <div class="achievement-item loading">
+                    <div class="achievement-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="achievement-text">Vinculación Empresarial</div>
+                </div>
+                
+                <div class="achievement-item loading">
+                    <div class="achievement-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="achievement-text">Sustentabilidad Ambiental</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Por qué elegirnos -->
+    <!-- Por qué elegirnos con nuevo diseño -->
     <section class="why-choose-us" id="nosotros">
         <div class="section-header">
             <div class="section-badge animate-fadeInUp">¿Por qué CBTA 97?</div>
@@ -157,7 +311,7 @@
         </div>
     </section>
 
-    <!-- Sección de Carreras -->
+    <!-- Sección de Carreras con nuevos colores -->
     <section class="careers-section" id="carreras">
         <div class="section-header">
             <div class="section-badge animate-fadeInUp">Oferta Educativa</div>
@@ -191,8 +345,8 @@
         </div>
 
         <!-- Carrera Soporte y Mantenimiento de Cómputo -->
-        <div id="computo" class="career-container active">
-            <div class="career-hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(30,144,255,0.5)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3')">
+        <div id="computo" class="career-container active" data-color="tech">
+            <div class="career-hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(33,150,243,0.5)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3')">
                 <div class="career-hero-content">
                     <h1>Técnico en Soporte y Mantenimiento de Equipo de Cómputo</h1>
                     <p>Conviértete en un especialista en tecnología con habilidades para el futuro digital</p>
@@ -291,8 +445,8 @@
         </div>
 
         <!-- Carrera Sistemas de Producción Agrícola -->
-        <div id="agricola" class="career-container">
-            <div class="career-hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(44,138,58,0.5)), url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3')">
+        <div id="agricola" class="career-container" data-color="agro">
+            <div class="career-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagenes/tecnico_s_p_a.jpg')">
                 <div class="career-hero-content">
                     <h1>Técnico en Sistemas de Producción Agrícola</h1>
                     <p>Conviértete en un experto en agricultura moderna y sustentable con las técnicas más avanzadas del sector</p>
@@ -392,7 +546,7 @@
         </div>
 
         <!-- Carrera Técnica Agropecuaria -->
-        <div id="agropecuaria" class="career-container">
+        <div id="agropecuaria" class="career-container" data-color="agro">
             <div class="career-hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(139,69,19,0.5)), url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-4.0.3')">
                 <div class="career-hero-content">
                     <h1>Técnico Agropecuario</h1>
@@ -493,8 +647,8 @@
         </div>
 
         <!-- Carrera Producción Pecuaria -->
-        <div id="pecuaria" class="career-container">
-            <div class="career-hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(44,138,58,0.5)), url('https://images.unsplash.com/photo-1470114716159-e389f8712fda?ixlib=rb-4.0.3')">
+        <div id="pecuaria" class="career-container" data-color="agro">
+            <div class="career-hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(74,124,89,0.5)), url('https://images.unsplash.com/photo-1470114716159-e389f8712fda?ixlib=rb-4.0.3')">
                 <div class="career-hero-content">
                     <h1>Técnico en Producción Pecuaria</h1>
                     <p>Especialízate exclusivamente en animales con técnicas avanzadas de reproducción y manejo especializado</p>
@@ -594,8 +748,8 @@
         </div>
 
         <!-- Carrera Desarrollo Integral Comunitario -->
-        <div id="desarrollo-comunitario" class="career-container">
-            <div class="career-hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(255,165,0,0.5)), url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3')">
+        <div id="desarrollo-comunitario" class="career-container" data-color="social">
+            <div class="career-hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(255,107,53,0.5)), url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3')">
                 <div class="career-hero-content">
                     <h1>Técnico en Desarrollo Integral Comunitario</h1>
                     <p>Forma parte del cambio social y mejora la calidad de vida de las comunidades</p>
@@ -695,8 +849,8 @@
         </div>
     </section>
 
-    <!-- Información Institucional -->
-    <section class="institutional-info" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 6rem 0;">
+    <!-- Información Institucional con nuevos colores -->
+    <section class="institutional-info">
         <div class="info-container">
             <div class="section-header">
                 <div class="section-badge animate-fadeInUp">Información Institucional</div>
@@ -704,7 +858,7 @@
                 <p class="section-subtitle animate-fadeInUp">Todo lo que necesitas saber para formar parte de nuestra comunidad educativa</p>
             </div>
 
-            <div class="institutional-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; max-width: 1200px; margin: 4rem auto 0; padding: 0 2rem;">
+            <div class="institutional-grid">
                 
                 <div class="info-card loading">
                     <h2>Requisitos de Ingreso</h2>
@@ -745,9 +899,7 @@
                         </div>
                         <div class="competency-content">
                             <h4>Turnos Académicos</h4>
-                            <p><strong>Turno Matutino:</strong> 7:00 AM - 1:00 PM<br>
-                            <strong>Turno Vespertino:</strong> 1:00 PM - 7:00 PM<br>
-                            Flexibilidad para estudiar y trabajar</p>
+                            <p><strong>Turno Matutino:</strong> 7:00 AM - 1:00 PM<br></p>
                         </div>
                     </div>
 
@@ -898,12 +1050,6 @@
                         </a>
                         <a href="https://www.instagram.com/cbta_97" class="social-link" target="_blank">
                             <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="mailto:cbta097sonora@yahoo.com.mx" class="social-link">
-                            <i class="fas fa-envelope"></i>
                         </a>
                     </div>
                 </div>
