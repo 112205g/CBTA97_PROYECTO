@@ -262,7 +262,6 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
-            padding: 1rem;
             z-index: 1002;
             background: none;
             border: none;
@@ -322,6 +321,7 @@
             transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
             z-index: 1001;
             overflow-y: auto;
+            border-radius: 10px 0px 0px 10px
         }
 
         .mobile-nav.active {
