@@ -724,8 +724,6 @@
         .stat-icon::before {
             content: '';
             position: absolute;
-            top: -10px;
-            left: -10px;
             width: 120px;
             height: 120px;
             border: 3px solid var(--verde-suave);
